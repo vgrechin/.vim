@@ -1,0 +1,99 @@
+syntax on
+"colorscheme blue 
+let python_highlight_all=1
+
+
+" Set indent, layout and tabs to spaces mode
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set autoindent
+set number
+
+"set previewheight=12
+"run macros/gdb_mappings.vim
+"set asm=0
+"set gdbprg=gdb_invocation          " set GDB invocation string (default 'gdb')
+
+
+" Set status line status
+set wildmenu
+set laststatus=2
+set statusline=%<%f\ [%Y%R%W]%1*%{(&modified)?'\ [+]\ ':''}%*%=%c%V,%l\ %P\ [%n]
+
+" my highlights
+highlight Comment font= cterm=NONE ctermfg=darkblue
+highlight Todo font= cterm=underline ctermbg=yellow ctermfg=red
+
+set nowrap     " Disable lines wrapping
+set nobackup     " Create backup files (filename~)
+set autoindent " Autoindent (depends on file's type)
+set sidescroll=5 " прокрутка вправо/влево, когда строка заезжает за когда вы по ней ползаете
+set listchars+=precedes:<,extends:> " показывать символы > OR < если есть что слева и или справа от строки
+set ignorecase " игнорировать прописные и строчные символы при поиске
+set incsearch  " перескакивать на результаты поиска при вводе 
+set hlsearch   " подсвечивать результаты поиска
+
+let &errorformat="%f:%l:%c: %t%*[^:]:%m,%f:%l: %t%*[^:]:%m," . &errorformat 
+
+"set foldmethod=indent
+set hidden
+
+"autocmd VimLeavePre * silent mksession ~/.vim/lastsession.vim
+
+map <F5> :tablast<cr>:make<cr>:copen<cr>
+map <C-F5> :tablast<cr>:make clean<cr>:make<cr>:copen<cr>
+map <F6> :cope <CR>
+map <F7> :cn<cr>zvzz:cc<cr>
+"map <F8> :cn<cr>zvzz:cc<cr>
+map <S-F7> :cp<cr>zvzz:cc<cr>
+
+" Tab navigation
+map <F3> :tabnext<cr>
+vmap <F3> <esc>:tabnext<cr>
+imap <F3> <esc>:tabnext<cr>
+
+map <F2> :tabprevious<cr>
+vmap <F2> <esc> :tabprevious<cr>
+imap <F2> <esc> :tabprevious<cr>
+
+"imap <F4> :tabclose<cr>
+"vmap <F4> <esc>:tabclose<cr>
+"imap <F4> <esc>:tabclose<cr>
+
+"map <F12> :Ex<cr>
+"vmap <F12> <esc>:Ex<cr>i
+"imap <F12> <esc>:Ex<cr>i
+
+" CTRL+y => remove current line
+"nmap <C-y> dd
+"imap <C-y> <esc>ddi
+
+" CTRL+c/v => copy/paste to global clipboard
+"vmap <C-C> "+yi
+"imap <C-V> <esc> "+gPi
+
+" F2 - quick save
+nmap <C-s> :w<cr>
+vmap <C-s> <esc>:w<cr>i
+imap <C-s> <esc>:w<cr>i
+
+" Set auto-completeon by tab!!!
+function InsertTabWrapper()
+    let col = col('.') - 1
+    if !col || getline('.')[col-1] !~ '\k'
+        return "\<tab>"
+    else
+        return "\<c-p>"
+    endif
+endfunction
+imap <tab> <c-r>=InsertTabWrapper()<cr>
+
+" Set autocompleteon from
+set complete="" 
+set complete+=. "current buffer
+set complete+=k "dictonary
+set complete+=b "other buffers
+set complete+=t "tags
+
