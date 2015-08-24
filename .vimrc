@@ -1,3 +1,5 @@
+execute pathogen#infect()
+
 syntax on
 "colorscheme blue 
 let python_highlight_all=1
