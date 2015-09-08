@@ -10,6 +10,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdtree'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -18,6 +19,7 @@ filetype plugin indent on    " required
 syntax on
 "colorscheme blue 
 let python_highlight_all=1
+let g:NERDTreeDirArrows=0
 
 
 " Set indent, layout and tabs to spaces mode
@@ -66,14 +68,16 @@ map <F7> :cn<cr>zvzz:cc<cr>
 "map <F8> :cn<cr>zvzz:cc<cr>
 map <S-F7> :cp<cr>zvzz:cc<cr>
 
-" Tab navigation
-map <F3> :tabnext<cr>
-vmap <F3> <esc>:tabnext<cr>
-imap <F3> <esc>:tabnext<cr>
+map <F2> :NERDTreeToggle<cr>
 
-map <F2> :tabprevious<cr>
-vmap <F2> <esc> :tabprevious<cr>
-imap <F2> <esc> :tabprevious<cr>
+" Tab navigation
+"map <F3> :tabnext<cr>
+"vmap <F3> <esc>:tabnext<cr>
+"imap <F3> <esc>:tabnext<cr>
+
+"map <F2> :tabprevious<cr>
+"vmap <F2> <esc> :tabprevious<cr>
+"imap <F2> <esc> :tabprevious<cr>
 
 "imap <F4> :tabclose<cr>
 "vmap <F4> <esc>:tabclose<cr>
