@@ -13,4 +13,6 @@
 
 `git submodule update --init --remote --recursive`
 
-`git submodule foreach git pull origin master`
+`for dir in bundle/*; do (cd $dir && git checkout master && git pull); done`
+
+ls bundle | parallel 'cd {} && git checkout master && git pull'
