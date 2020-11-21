@@ -15,13 +15,16 @@ Plugin 'xuyuanp/nerdtree-git-plugin'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'mileszs/ack.vim'
+Plugin 'altercation/vim-colors-solarized'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 syntax on
-"colorscheme blue 
+set background=dark
+let g:solarized_termcolors=256
+colorscheme solarized
 let python_highlight_all=1
 let g:NERDTreeDirArrows=0
 
@@ -33,6 +36,7 @@ set softtabstop=4
 set expandtab
 set autoindent
 set number
+set term=xterm-256color
 
 "set previewheight=12
 "run macros/gdb_mappings.vim
@@ -66,6 +70,11 @@ set hidden
 "autocmd VimLeavePre * silent mksession ~/.vim/lastsession.vim
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 map <F5> :tablast<cr>:make<cr>:copen<cr>
 map <C-F5> :tablast<cr>:make clean<cr>:make<cr>:copen<cr>
