@@ -14,6 +14,7 @@ Plugin 'sickill/vim-monokai'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'mileszs/ack.vim'
+Plugin 'vim-airline/vim-airline'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -31,6 +32,8 @@ set softtabstop=4
 set expandtab
 set autoindent
 set number
+set laststatus=2
+set term=xterm-256color
 
 "set previewheight=12
 "run macros/gdb_mappings.vim
