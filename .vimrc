@@ -13,6 +13,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'sickill/vim-monokai'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
+Plugin 'mileszs/ack.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
