@@ -1,0 +1,1 @@
+../bundle/vim-qkdb-syntax/syntax/q.vim
