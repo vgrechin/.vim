@@ -1,0 +1,1 @@
+../bundle/jam.vim/syntax/jam.vim
