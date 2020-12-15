@@ -21,6 +21,7 @@ Plugin 'elixir-editors/vim-elixir'
 Plugin 'katusk/vim-qkdb-syntax'
 Plugin 'vim-scripts/jam.vim'
 Plugin 'PProvost/vim-ps1'
+Plugin 'vim-scripts/csv.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

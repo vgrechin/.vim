@@ -37,3 +37,7 @@
 [submodule "bundle/vim-ps1"]
 	path = bundle/vim-ps1
 	url = https://github.com/PProvost/vim-ps1.git
+[submodule "bundle/csv.vim"]
+	path = bundle/csv.vim
+	url = https://github.com/vim-scripts/csv.vim
+    ignore = all
