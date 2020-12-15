@@ -16,6 +16,7 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'katusk/vim-qkdb-syntax'
+Plugin 'vim-scripts/csv.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

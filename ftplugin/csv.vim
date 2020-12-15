@@ -1,0 +1,1 @@
+../bundle/csv.vim/ftplugin/csv.vim

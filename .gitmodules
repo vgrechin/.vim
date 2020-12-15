@@ -22,3 +22,7 @@
 [submodule "bundle/vim-qkdb-syntax"]
 	path = bundle/vim-qkdb-syntax
 	url = https://github.com/katusk/vim-qkdb-syntax
+[submodule "bundle/csv.vim"]
+	path = bundle/csv.vim
+	url = https://github.com/vim-scripts/csv.vim
+    ignore = all
