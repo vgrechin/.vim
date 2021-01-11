@@ -15,6 +15,7 @@ Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'vim-airline/vim-airline'
+Plugin 'frazrepo/vim-rainbow'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -23,6 +24,7 @@ filetype plugin indent on    " required
 syntax on
 colorscheme monokai 
 let python_highlight_all=1
+let g:rainbow_active=1
 
 
 " Set indent, layout and tabs to spaces mode
